@@ -1,0 +1,20 @@
+.hightlight{
+    padding: 7rem 0;
+    &-list{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2rem 2rem;
+        .menu-slider-item{
+            width: 100%;
+            background-color: #eee;
+            box-shadow: rgba(100, 100, 111, 0.797) 0px 7px 29px 0px;
+        }
+    }
+
+    @include maxWidth(767px){
+        &-list{
+            grid-template-columns: 1fr;
+        }
+    }
+}

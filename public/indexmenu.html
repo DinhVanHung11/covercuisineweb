@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sky's Gourmet Tacos Restaurant</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="styles/fontawesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&amp;family=Cookie&amp;family=Open+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body class="home-page">
+    <div class="wrapper">
+      <div class="progress-bar"></div>
+      <header class="header"> 
+        <div class="header-top"> 
+          <div class="container"> 
+            <div class="header-top-main"> 
+              <div class="header-top-title global global-text-small">Sky's Gourmet Tocas Restaurant is pleased to serve you!</div>
+              <div class="header-top-info"> <a class="header-top-info-link global global-text-small" href="./indexintroduce.html">Payment Terms</a><a class="header-top-info-link global global-text-small" href="./indexintroduce.html">Instructions for booking a table</a><i class="fas fa-search seacrh-icon global global-text-small"></i></div>
+              <div class="header-fixed"> 
+                <div class="container header-fixed-main">
+                  <div class="header-fixed-logo"> <img src="./images/SkysTacoSmall.png" alt=""></div>
+                  <div class="header-fixed-menu"> 
+                    <div class="header-fixed-item"> <a class="header-fixed-link global-title" href="./index.html">Home page</a></div>
+                    <div class="header-fixed-item"> <a class="header-fixed-link global-title" href="./indexintroduce.html">Introduce</a></div>
+                    <div class="header-fixed-item"> <a class="header-fixed-link global-title" href="./indexmenu.html" target="_blank">Menu</a></div>
+                    <div class="header-fixed-item"> <a class="header-fixed-link global-title" href="./indexintroduce.html">News-Events</a></div>
+                    <div class="header-fixed-item"> <a class="header-fixed-link global-title" href="./indexintroduce.html">Contact</a></div>
+                    <buttton class="button header-hotline">Hotline: 0999000000            </buttton>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-slide"> 
+          <div class="header-slide-list">
+            <div class="header-slide-item"> 
+              <div class="header-slide-image"> <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1332&amp;q=80"/></div>
+              <div class="header-slide-content"> 
+                <div class="header-content-title global global-title">SKY'S ROYAL STEAK SANDWICH</div>
+                <div class="header-content-desc global global-text">Coming to Sky's Gourmet Tacos restaurant, you will enjoy the best hot pot dishes, prepared by the top chefs in the UK. We will make you satisfied for sure</div><a class="button header-button" href="#book">Book a table now</a>
+              </div>
+            </div>
+            <div class="header-slide-item"> 
+              <div class="header-slide-image"> <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+              <div class="header-slide-content"> 
+                <div class="header-content-title global global-title">Los Angeles cuisine</div>
+                <div class="header-content-desc global global-text">Nothing is more wonderful than enjoying American cuisine with family and loved ones. We provide hot pot dishes with American cuisine that bring a familiar but extremely special feeling for you to enjoy</div><a class="button header-button" href="#book">Book a table now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="meal-selected-wrapper cart-fixed">
+        <div class="meal-selected-list-wrapper">
+          <div class="meal-selected-list"> </div>
+          <div class="meal-selected-total-wrapper"> 
+            <div class="meal-selected-total">
+              <p class="global-title meal-selected-total-text">Total</p>
+              <div class="meal-selected-total-price"><span class="global-text meal-selected-total-num">0</span><span class="global-text meal-selected-total-dollar">$</span></div>
+            </div>
+          </div>
+          <div class="meal-selected-payment-wrapper"> 
+            <div class="meal-selected-payment">
+              <p class="global-title meal-selected-payment-text">Payment now</p>
+            </div>
+          </div>
+        </div><i class="fa fa-cart-plus cart-icon"></i>
+      </div>
+      <main>
+        <section class="menu-page"> 
+          <div class="container">
+            <div class="menu-page-content"> 
+              <div class="menu-page-list-wrapper">
+                <h3 class="global-title menu-page-edit-title">Add a new dish to menu</h3>
+                <div class="menu-page-edit">
+                  <form class="menu-page-add"> 
+                    <div class="menu-page-add-item">
+                      <label for="meal-image-add">Meal's Image: </label>
+                      <input class="menu-page-add-input" type="text" name="meal-image-add" required id="meal-image-add" placeholder="Enter url image of meal..">
+                    </div>
+                    <div class="menu-page-add-item">
+                      <label for="meal-name-add">Meal's Name: </label>
+                      <input class="menu-page-add-input" type="text" name="meal-name-add" required id="meal-name-add" placeholder="Enter name of meal..">
+                    </div>
+                    <div class="menu-page-add-item">
+                      <label for="meal-price-add">Meal's Price: </label>
+                      <input class="menu-page-add-input" type="text" name="meal-price-add" required id="meal-price-add" placeholder="Enter price of meal..">
+                    </div>
+                    <div class="menu-page-add-item menu-page-add-sell">
+                      <label for="meal-sell-add" id="meal-sell-label">Is there a discount for this dish?</label>
+                      <input class="menu-page-add-input" type="checkbox" name="meal-sell-add" id="meal-sell-add">
+                    </div>
+                    <button class="button menu-page-add-button" type="submit">Add a new dish</button>
+                  </form>
+                  <div class="menu-page-filter">
+                    <select>
+                      <option value="increase">Price increase</option>
+                      <option value="descending">Price descending</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="menu-page-list"> 
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=880&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Salad Mannequin</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">89</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=480&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Dorayaki Japan</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">99</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=481&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Pizza Gourmet Tocas</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">84</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1601356616077-695728ae17cb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Beaf Steak</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">59</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1578935149228-66b184c83e69?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=435&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Squid LA</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">49</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1052&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Calms steam</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">65</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1628294896516-344152572ee8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Pork Ameria</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">31</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Shirmp</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">15</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=327&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Shushi Japan</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">108</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1565967531713-45739e0cad63?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Shushi with chicken</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">74</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1568096889942-6eedde686635?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Gourmet Tocas</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">115</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1591325418441-ff678baf78ef?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1074&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Ramen Naruto</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">68</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1647891936623-df2c0f19ca9c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1169&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Milk</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">10</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=464&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Peach orange lemongrass tea</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">16</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=415&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Water Melon</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">08</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Cock Tail</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">30</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1530062845289-9109b2c9c868?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1172&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Camping</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">94</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=464&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Indian mixed noodles</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">24</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1627308595186-e6bb36712645?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=435&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">omelet fried rice</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">18</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">mixed soup</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">29</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1580651315530-69c8e0026377?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Cheese Toboki</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">35</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1545984929-f28d9e323a00?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=503&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">fried heart with wood ear</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">11</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1532347231146-80afc9e3df2b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=385&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Gimbab Kore</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">13</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1594030990808-ebd1c2247c28?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=459&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Grilled octopus</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">190</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1600975850954-941bc3ac0ca1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Sangria Senorial</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">09</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1479796099910-b137a80acde4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=469&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">sherry</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">44</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1531263539449-56fdf29dfc4d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">Soju</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">08</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                  <div class="menu-slider-item">
+                    <div class="menu-slider-image"><img src="https://images.unsplash.com/photo-1621866908556-4f0a830707c9?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80"/></div>
+                    <div class="menu-slider-more">   
+                      <div class="menu-slider-info">
+                        <p class="global-desc--second menu-slider-name">grape wine</p>
+                        <div class="menu-slider-price"><span class="menu-slider-dollar">$</span><span class="menu-slider-number">51</span></div>
+                      </div><a class="button book-plus">Book now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-page-care">
+                <div class="menu-page-care-title">Maybe you are interested</div>
+                <div class="menu-page-care-list">  
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://images.unsplash.com/photo-1628809643597-654efb99b214?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=385&amp;q=80" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">The secret to making flan smooth, soft and beautiful 'like a queen'</p>
+                  </div>
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/mi-tron-ga-xe-6-1552905753415121749128-1.jpg" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">I made mixed noodles to take out for lunch, the whole office asked for it</p>
+                  </div>
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/thịt-lợn-rừng.jpg" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">Losing weight is no longer difficult since I have a 'divine' mixed vermicelli for lunch every day</p>
+                  </div>
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://images.unsplash.com/photo-1490556278693-b666672547a1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">May be egg is the easy dishes for you, but do you know how to do egg like me?</p>
+                  </div>
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">Ice Cream is the best on the summer, let book it now for you and your family</p>
+                  </div>
+                  <div class="menu-page-care-item">
+                    <div class="menu-page-care-image"> <img src="https://images.unsplash.com/photo-1614398750956-402891a7dce1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1171&amp;q=80" alt=""/></div>
+                    <p class="menu-page-care-desc global-text">BBQ the more delicous when go out with your friend</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"> 
+        <div class="container footer-main">
+          <div class="footer-content footer-item">
+            <h3 class="footer-title">Sky's Gourmet Tocas</h3>
+            <p class="global-text footer-desc">Our restaurant is proud to be one of the famous restaurants in Los Angeles, specializing in authentic California dishes.</p>
+            <p class="global-text footer-desc">Fresh food is our indispensable requirement to prepare wharf for customers. You will surely be satisfied with the quality of our products and services.</p>
+          </div>
+          <div class="footer-socials footer-item">
+            <div class="footer-logo"> <img src="./images/SkysTacoSmall.png" alt=""></div>
+            <button class="button footer-button">Book table now</button>
+            <div class="footer-social"><a class="footer-social-item icon-facebook" href="#!"><i class="fab fa-facebook-f"></i></a><a class="footer-social-item icon-email" href="#!"><i class="fas fa-envelope"></i></a><a class="footer-social-item icon-phone" href="#!"><i class="fas fa-phone-alt"></i></a><a class="footer-social-item icon-pinterest" href="#!"> <i class="fab fa-pinterest-p"></i></a></div>
+          </div>
+          <div class="footer-contact footer-item"> 
+            <p class="footer-info">Contact information </p>
+            <ul class="footer-contact-menu"> 
+              <li class="footer-contact-item">Address: Sky's Marketplace 4333 Admiralty Way #001 Marina Del Rey, CA 90292</li>
+              <li class="footer-contact-item">Phone: 0999000000</li>
+              <li class="footer-contact-item">Email: email@gmail.com</li>
+              <li class="footer-contact-item">Website: myproduct.com</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scripts/menupage.js"></script>
+  </body>
+</html>

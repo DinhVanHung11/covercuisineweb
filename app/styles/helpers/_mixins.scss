@@ -1,0 +1,43 @@
+@mixin flexDisplay($align: center,$justify: space-between,$wrap: nowrap,$dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+
+@mixin  backgroundImage($url){
+    background: 
+        url($url) no-repeat center / cover;
+}
+
+@mixin absoluteCenter($top: 50%, $left: 50%, $toptrans:50%, $lefttrans: 50%){
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate(-$toptrans,-$lefttrans);
+}
+
+@mixin  maxWidth($breakpoint) {
+    @media screen and (max-width: $breakpoint){
+        @content;
+    }
+}
+
+@mixin  minWidth($breakpoint) {
+    @media screen and (min-width: $breakpoint){
+        @content;
+    }
+}
+
+@mixin textClamp($rows:1,$size:100%){
+    display: -webkit-box;
+    -webkit-line-clamp: $rows;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: $size;
+    max-width: $size;
+    white-space: pre-wrap;
+    word-break: break-word;
+}

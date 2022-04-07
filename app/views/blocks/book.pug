@@ -1,0 +1,56 @@
+section.book
+    .book-top 
+        .container.book-list
+            +bookItem("https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/phone-icon.png", "0909009009","Hotline for ordering and consulting 24/7")
+            +bookItem("https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/mail-icon.png", "demo@gmail.com","Email to receive quotation, invoice request")
+            +bookItem("https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/map-icon.png", "Pico Location 5303 W Pico Blvd Los Angeles","Address of Sky's Gourmet Tocas Restaurant")
+    .container
+        .book-input
+            h3.global-title.book-title Contact to book a table
+            div.globbal-text-small.book-desc Please reserve your table in advance so we can arrange the best seats for you!
+            form.book-form
+                .book-form-item
+                    label(for="name") Your name: 
+                    .book-form-email
+                        input(type="text", name="name", required, class="book-input-item", id="book-name", placeholder="Enter your name...") 
+                        .book-email-icon
+                            i.fas.fa-check
+                            i.fas.fa-times
+                .book-form-item
+                    label(for="number") People: 
+                    .book-form-email
+                        input(type="number", name="number", required, class="book-input-item", id="book-number", min="1", max="6",value="",placeholder="People...") 
+                        .book-email-icon
+                            i.fas.fa-check
+                            i.fas.fa-times
+                .book-form-item
+                    label(for="name") Your phone: 
+                    .book-form-email
+                        input(type="text", name="phone", required, class="book-input-item", id="book-phone", placeholder="Enter your phone...") 
+                        .book-email-icon
+                            i.fas.fa-check
+                            i.fas.fa-times
+                .book-form-item
+                    label(for="date") What day can you come for a meal?
+                    input(type="date", name="date", required, class="book-input-item", id="date") 
+                .book-form-item
+                    label(for="email") Your email(if any): 
+                    .book-form-email
+                        input(type="text", name="email", class=" book-input-item", id="book-email", placeholder="Enter your email...") 
+                        .book-email-icon
+                            i.fas.fa-check
+                            i.fas.fa-times
+                .book-form-item
+                    label(for="select") Time: 
+                    select(class="book-select" id="select")
+                        option(value="time") Time
+                        option(value="lreakfast") Breakfast
+                        option(value="launch") Launch
+                        option(value="afternoon") Afternoon
+                        option(value="dinner") Dinner
+                .book-now
+                    p.golbal-text.book-conference Guests booking conference, festival, please call directly: 0909009009
+                    button.button.book-button(type="submit") Book a table now
+
+            
+            

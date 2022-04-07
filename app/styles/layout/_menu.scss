@@ -1,0 +1,200 @@
+.menu{
+    margin-bottom: 7rem;
+    &-logo{
+        margin: 0 auto 2rem;
+        width: 30rem;
+        height: 22rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-tablist{
+        max-width: 95rem;
+        margin: 3rem auto 5rem;
+        @include flexDisplay();
+    }
+    &-button{
+        transition: all 0.2s linear;
+        &:hover{
+            background-color: $red-color;
+        }
+    }
+    &-button.is-active{
+        background-color: $red-color;
+    }
+    &-slider.is-show{
+        display: flex;
+    }
+    &-slider{
+        margin-bottom: 2rem;
+        display: none;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 0 2rem;
+        &-item{
+            box-shadow: rgba(100, 100, 111, 0.393) 0px 0px 10px 0px;
+            padding: 1.5rem 1rem;
+            width: calc(25% - 1.5rem);
+            border-radius: 1rem;
+        }
+        &-image{
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border-radius: inherit;
+            width: 100%;
+            height: 17.5rem;
+            img{
+                height: 100%;
+                cursor: pointer;
+                border-radius: inherit;
+                width: 100%;
+                object-fit: cover;
+                transition: transform 0.2s linear;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+        &-name{
+            font-weight: bold;
+        }
+    }
+    &-slider-more{
+        @include flexDisplay(center);
+    }
+    &-slider-price{
+        margin-top: 0.8rem;
+    }
+    &-slider-dollar,
+    &-slider-number{
+        margin-top: 1rem;
+        color: $red-color;
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: $second-font;
+    }
+    &-seller{
+        display: grid;
+        height: 36rem;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:	
+            "h1 h2 h2 h3" 
+            "h4 h2 h2 h5";
+        gap: 2rem;
+        &-image{
+            height: 18rem;
+            border-radius: 1rem;
+            position: relative;
+            img{
+                border-radius: inherit;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            &:first-child{
+                grid-area: h1;
+            }
+            &:nth-child(2){
+                grid-area: h4;
+            }
+            &:nth-child(3){
+                grid-area: h2;
+                height: 38rem;
+            }
+            &:nth-child(4){
+                grid-area: h3;
+            }
+            &:last-child{
+                grid-area: h5;
+            }
+        }
+        &-sell{
+            position: absolute;
+            background-color: #0869aec8;
+            left: 0;
+            top: 60%;
+            width: 50%;
+            padding: 1.5rem;
+        }
+        &-text{
+            font-size: 2rem;
+            font-family: $second-font;
+        }
+        &-number{
+            font-family: $second-font;
+            position: absolute;
+            right: 0;
+            top: 0; 
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            @include flexDisplay(center,center);
+            border-radius: 50%;
+            background-color: green;
+            transform: translate(2rem,-50%);
+        }
+    }
+
+    @include maxWidth(1023px){
+        &-tablist-wrapper{
+            position: relative;
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+        &-tablist{
+            max-width: 100%;
+            gap: 0 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        &-tablist{          
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        &-tablist::-webkit-scrollbar {
+                display: none;
+        }
+        &-tabitem{
+            flex-shrink: 0;
+        }
+    }
+
+    @include maxWidth(767px){
+        &-slider{
+            flex-direction: column;
+            gap: 2rem 0;
+            align-items: stretch;
+            &-item{
+                width: 100%;
+            }
+        }
+        &-seller{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem 0;
+            &-image{
+                &:nth-child(3){
+                    height: 15rem;
+                }
+                width: 100%;
+                height: 15rem;
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-sell{
+                top: 20%;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+.book-plus{
+    padding: 0.5rem 1.2rem;
+}

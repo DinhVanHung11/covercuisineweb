@@ -1,0 +1,185 @@
+.menu-page{
+    margin-bottom: 10rem;
+    &-content{
+        @include flexDisplay(flex-start);
+        gap: 0 2rem;
+    }
+    &-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    .menu-slider-item{
+        width: 100%;
+    }
+    &-care{
+        max-width: 28rem;
+        background-color: white;
+        &-title{
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+        }
+        &-item{
+            @include flexDisplay(flex-start);
+            padding-bottom: 2rem;
+            gap: 0 2rem;
+            margin-bottom: 1rem;
+        }
+        &-item:not(:first-child){
+            padding-top: 1rem;
+        }
+        &-item:not(:last-child){
+            border-bottom: 1px solid rgb(202, 199, 199);
+        }
+        &-image{
+            flex-shrink: 0;
+            width: 5rem;
+            height: 5rem;
+            img{
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-desc{
+            color: $gray-color;
+        }
+    }
+
+    &-edit{
+        margin-bottom: 3rem;
+        @include flexDisplay(flex-end);
+        &-title{
+            color: $red-color;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            word-spacing: 0.3rem;
+        }
+    }
+    &-add{
+        display: block;
+        width: 80%;
+        flex-shrink: 0;
+        @include flexDisplay(center, center,wrap);
+        gap: 1rem 1.5rem;
+        label{
+            display: block;
+            color: black;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        &-item{
+            width: calc(50% - 2rem);
+            display: flex;
+            flex-direction: column;
+        }
+        &-button{
+            padding: 0.8rem 3rem;
+        }
+        &-sell{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 0 0.6rem;
+        }
+        &-input{
+            display: block;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            border: 1px solid #eee;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    &-filter{
+        width: 20%;
+        flex-shrink: 0;
+        padding: 0.8rem 1rem;
+        border-radius: 0.8rem;
+        border: 1px solid #eee;
+        select{
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            background-color: transparent;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    #meal-sell-add{
+        width: 2rem;
+        margin-left: 1rem;
+    }
+    #meal-sell-label{
+        color: $red-color-dark;
+        font-family: $third-font;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    @include maxWidth(1023px){
+        &-content{
+            display: block;
+        }
+        &-list{
+            margin-bottom: 3rem;
+        }
+        &-care{
+            max-width: 100%;
+        }
+        &-care-list{
+            @include flexDisplay(stretch,space-between,wrap);
+            gap: 4rem 3rem;
+        }
+        &-care-item{
+            width: calc(50% - 1.5rem);
+            padding: 0 !important;
+            margin-bottom: 0;
+            border:  0 !important;
+        }
+    }
+    @include maxWidth(767px){
+        margin-bottom: 7rem;
+        &-list{
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 4rem;
+        }
+        &-care-list{
+            display: block;
+        }
+        &-care-item{
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        &-edit{
+            display: block;
+            margin-bottom: 2rem;
+        }
+        &-add{
+            display: block;
+            width: 100%;
+            &-item{
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            &-input{
+                padding: 0.5rem 0.8rem;
+            }
+            &-button{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &-filter{
+            margin-top: 1.5rem;
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+}

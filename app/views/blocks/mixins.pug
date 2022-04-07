@@ -1,0 +1,69 @@
+mixin headerItem(title, desc,src)
+    .header-slide-item 
+        .header-slide-image 
+            img(src= src)
+        .header-slide-content 
+            .header-content-title.global.global-title= title
+            .header-content-desc.global.global-text= desc 
+            a.button.header-button(href="#book") Book a table now
+
+mixin headerFixedItem(title,href,target)
+    .header-fixed-item 
+        a(href= href, target= target).header-fixed-link.global-title= title
+
+mixin blockHeading(heading, desc)
+    .heading-box
+        h2.box-text
+            span.global-heading= heading
+        p.menu-desc.global-desc= desc
+
+mixin menuTabItem(title,tab)
+    .menu-tabitem(data-tab= tab) 
+        button.button.button--primary.menu-button= title 
+
+mixin menuSliderItem(src, desc, price="99")
+    .menu-slider-item
+        .menu-slider-image
+            img(src= src)
+        .menu-slider-more    
+            .menu-slider-info
+                p.global-desc--second.menu-slider-name= desc
+                .menu-slider-price
+                    span.menu-slider-dollar $
+                    span.menu-slider-number= price
+            a.button.book-plus Book now
+mixin newItem(src,title,date)
+    a.new-item 
+        .new-image 
+            img(src= src, alt="")
+        p.global-text.new-title= title
+        span.global-text-small.new-date= date
+
+mixin menuSellerItem(src,number,text="Sky's Gourmet Tocas Restaurant")
+    .menu-seller-image
+        img(src= src)
+        .menu-seller-sell 
+            p.global-text.menu-seller-text= text 
+            span.global-text.menu-seller-number= number
+
+mixin whyItems(src, desc)
+    .why-item 
+        .why-image 
+            img(src= src, alt="")
+        .why-item-text 
+            p.global-text.why-item-desc= desc 
+
+mixin bookItem(src,contact,text)
+    .book-item 
+        .book-icon
+            img(src= src, alt="")
+        .book-info 
+            p.global-text.book-contact= contact
+            p.global-text.book-info-more= text
+
+mixin menuPageCare(src,desc) 
+    .menu-page-care-item
+        .menu-page-care-image 
+            img(src= src, alt="")
+        p.menu-page-care-desc.global-text= desc
+        

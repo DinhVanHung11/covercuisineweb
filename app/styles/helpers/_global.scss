@@ -1,0 +1,439 @@
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body{
+    font-size: 14px;
+    color: #ffffff;
+    font-family: $primary-font;
+    line-height: 1;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.global{
+    color: #ffffff;
+    font-weight: 300;
+    &-heading{
+        color: $red-color-dark;
+        font-family: $second-font;
+        font-size: 3.5rem;
+    }
+    &-title{
+        font-family: $second-font;
+        font-size: 2.5rem;
+    }
+    &-text{
+        font-size: 1.6rem;
+        &-small{
+            font-size: 1.4rem;
+        }
+    }
+    &-desc{
+        font-size: 1.6rem;
+        color: black;
+        &--second{
+            color: $green-color;
+            font-weight: bold;
+        }
+    }
+}
+
+.heading-box{
+    margin: 0 auto;
+    text-align: center;
+}
+.box-text{
+    text-align: center;
+    position: relative;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $gray-color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); 
+    }
+}
+.global-heading{
+    font-weight: bold;
+    display: inline-block;
+    padding: 1.5rem;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    word-spacing: 0.5rem;
+    font-size: 4rem;
+}
+
+.button{
+    background-color: $red-color;
+    color: white;
+    border-radius: 3rem;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    padding: 1.5rem 2rem;
+    font-family: $second-font;
+    font-size: 1.8rem;
+    &--primary{
+        background-color: $gray-color;
+        padding: 1rem 2rem;
+    }
+}
+
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.sweet-alert{
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    max-width: 35rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    transform: translateY(150%);
+    animation: sweet 1s linear 1;
+    background-image: linear-gradient(to bottom,  #dd3e54, #6be585);
+}
+
+.sweet-icon{
+    font-size: 5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.sweet-text{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+@keyframes sweet{
+    50%,100%{
+        transform: translateX(0);
+    }
+}
+
+.icon-slider{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $gray-color-light;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    @include flexDisplay(center,center);
+    font-size: 3rem;
+    font-weight: 600;
+    transition: all 0.2s linear;
+    opacity: 0;
+    cursor: pointer;
+    &:hover{
+        color: $red-color;
+    }
+}
+.icon-next{
+    right: -8rem;
+}
+.icon-prev{
+    left: -8rem;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.slick-prev{
+    left: -8rem;
+}
+.slick-next{
+    right: -8rem;
+}
+
+.fa-angle-right,
+.fa-angle-left{
+    font-size: 4rem;
+    font-weight: 500;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    @include flexDisplay(center,center);
+    background-color: $gray-color-light;
+    transition: all 0.2s linear;
+    border-radius: 50%;
+    outline: none;
+    border: 0;
+    &:hover{
+        color: $red-color;
+    }
+}
+
+.meal-selected{
+    position: absolute;
+    width: 7rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 3rem;
+    transition: all 1s ease-in-out;
+
+    @include maxWidth(767px){
+        &-content{
+            flex-shrink: 0;
+        }
+        &-wrapper{
+            width: 30rem;
+        }
+        &-list-wrapper{
+            width: 100%;
+        }
+    }
+}
+
+.cart-fixed{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 10000;
+}
+
+.cart-icon{
+    font-size: 5rem;
+    color: $red-color;
+    transition: color 0.2s linear;
+    animation: scaleCart 1s infinite linear;
+    &:hover{
+        color: $red-color-dark;
+    }
+
+    @include maxWidth(767px){
+        font-size: 3.5rem;
+    }
+}
+
+@keyframes scaleCart{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.meal-selected{
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem 0;
+    }
+    &-list-wrapper{
+        height: 0;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 20px;
+    }
+    &-list{
+        padding: 2rem;
+    }
+    &-list.is-show{
+        height: auto;
+    }
+    &-item{
+        @include flexDisplay();
+        gap: 0 15rem;
+    }
+    &-item:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    &-item:not(:first-child){
+        padding-top: 2rem;
+        border-top: 1px solid rgba(95, 93, 93, 0.284);
+    }
+    &-image{
+        width: 6.5rem;
+        height: 4.5rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4rem;
+        }
+    }
+    &-content{
+        @include flexDisplay(flex-start);
+        gap: 0 2rem;
+    }
+    &-dollar,
+    &-price,
+    &-name{
+        line-height: 1;
+        color: $red-color;
+        font-size: 2.2rem;
+    }
+
+    &-amount{
+        @include flexDisplay();
+        gap: 0 1.2rem;
+        i{
+            cursor: pointer;
+            color: black;
+            font-size: 2.3rem;
+            font-weight: 300;
+        }
+    }
+    &-number{
+        font-size: 2rem;
+        color: black;
+    }
+    &-total-wrapper{
+        padding: 2rem;
+    }
+    &-total{
+        @include flexDisplay();
+        background-color: $gray-color-light;
+        padding: 1rem 5rem;
+        border-radius: 1rem;
+    }
+    &-total-text{
+        color: $red-color-dark;
+        font-size: 2.8rem;
+    }
+    &-total-dollar,
+    &-total-num{
+        color: white;
+        font-size: 2rem;
+    }
+    &-payment-wrapper{
+        padding: 0 2rem 2rem 2rem;
+    }
+    &-payment{
+        text-align: center;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        border-radius: 1rem;
+        color: white;
+        background-color: $red-color;
+    }
+
+    @include maxWidth(767px){
+        &-total-text{
+            font-size: 2.4rem;
+        }
+        &-total-dollar,
+        &-total-num{
+            font-size: 1.8rem;
+        }
+        &-payment-text{
+            font-size: 2.4rem;
+        }
+        &-total-wrapper{
+            padding: 0.8rem 2rem;
+        }
+        &-total{
+            padding: 0.5rem 2rem;
+        }
+        &-payment-wrapper{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.book-plus{
+    flex-shrink: 0;
+}
+
+.introduce-desc{
+    p{
+        color: black;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+}
+
+.modal{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: zoom-out;
+}
+.modal-content {
+    z-index: 99999;
+    display: block;
+    width: 70%;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.495);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-input{
+    background-color: transparent;
+    cursor: auto;
+    border: 0;
+    outline: none;
+    color: white;
+    font-size: 1.8rem;
+    width: 90%;
+}
+.modal-search{
+    color: $red-color;
+    font-size: 2rem;
+}
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: $gray-color;
+    background-color: transparent !important;
+    font-size: 4rem;
+    font-weight: 400;
+    transition:  color 0.2s ease-in;
+    cursor: pointer;
+    &:hover{
+        color: $red-color;
+    }
+}

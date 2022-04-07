@@ -1,0 +1,63 @@
+section.menu-page 
+    .container
+        .menu-page-content 
+            .menu-page-list-wrapper
+                h3.global-title.menu-page-edit-title Add a new dish to menu
+                .menu-page-edit
+                    form.menu-page-add 
+                        .menu-page-add-item
+                            label(for="meal-image-add") Meal's Image: 
+                            input(type="text", name="meal-image-add", required, class="menu-page-add-input", id="meal-image-add", placeholder="Enter url image of meal..")
+                        .menu-page-add-item
+                            label(for="meal-name-add") Meal's Name: 
+                            input(type="text", name="meal-name-add", required, class="menu-page-add-input", id="meal-name-add", placeholder="Enter name of meal..")
+                        .menu-page-add-item
+                            label(for="meal-price-add") Meal's Price: 
+                            input(type="text", name="meal-price-add", required, class="menu-page-add-input", id="meal-price-add", placeholder="Enter price of meal..")
+                        .menu-page-add-item.menu-page-add-sell
+                            label(for="meal-sell-add",id="meal-sell-label") Is there a discount for this dish?
+                            input(type="checkbox", name="meal-sell-add",class="menu-page-add-input", id="meal-sell-add")
+                        button(type="submit").button.menu-page-add-button Add a new dish
+                    .menu-page-filter
+                        select
+                            option(value="increase") Price increase
+                            option(value="descending") Price descending
+                .menu-page-list 
+                    +menuSliderItem("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80", "Salad Mannequin","89")
+                    +menuSliderItem("https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80", "Dorayaki Japan")
+                    +menuSliderItem("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481&q=80", "Pizza Gourmet Tocas","84")
+                    +menuSliderItem("https://images.unsplash.com/photo-1601356616077-695728ae17cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", "Beaf Steak","59")
+                    +menuSliderItem("https://images.unsplash.com/photo-1578935149228-66b184c83e69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80", "Squid LA","49")
+                    +menuSliderItem("https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80", "Calms steam","65")
+                    +menuSliderItem("https://images.unsplash.com/photo-1628294896516-344152572ee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Pork Ameria","31")
+                    +menuSliderItem("https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Shirmp","15")
+                    +menuSliderItem("https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80", "Shushi Japan","108")
+                    +menuSliderItem("https://images.unsplash.com/photo-1565967531713-45739e0cad63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Shushi with chicken","74")
+                    +menuSliderItem("https://images.unsplash.com/photo-1568096889942-6eedde686635?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Gourmet Tocas","115")
+                    +menuSliderItem("https://images.unsplash.com/photo-1591325418441-ff678baf78ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80", "Ramen Naruto","68")
+                    +menuSliderItem("https://images.unsplash.com/photo-1647891936623-df2c0f19ca9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80", "Milk","10")
+                    +menuSliderItem("https://images.unsplash.com/photo-1499638673689-79a0b5115d87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80", "Peach orange lemongrass tea", "16")
+                    +menuSliderItem("https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80", "Water Melon","08")
+                    +menuSliderItem("https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", "Cock Tail","30")
+                    +menuSliderItem("https://images.unsplash.com/photo-1530062845289-9109b2c9c868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80", "Camping","94")
+                    +menuSliderItem("https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80", "Indian mixed noodles","24")
+                    +menuSliderItem("https://images.unsplash.com/photo-1627308595186-e6bb36712645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80", "omelet fried rice", "18")
+                    +menuSliderItem("https://images.unsplash.com/photo-1617093727343-374698b1b08d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "mixed soup", "29")
+                    +menuSliderItem("https://images.unsplash.com/photo-1580651315530-69c8e0026377?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Cheese Toboki", "35")
+                    +menuSliderItem("https://images.unsplash.com/photo-1545984929-f28d9e323a00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=503&q=80", "fried heart with wood ear", "11")
+                    +menuSliderItem("https://images.unsplash.com/photo-1532347231146-80afc9e3df2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80", "Gimbab Kore","13")
+                    +menuSliderItem("https://images.unsplash.com/photo-1594030990808-ebd1c2247c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=459&q=80", "Grilled octopus", "190")
+                    +menuSliderItem("https://images.unsplash.com/photo-1600975850954-941bc3ac0ca1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Sangria Senorial", "09")
+                    +menuSliderItem("https://images.unsplash.com/photo-1479796099910-b137a80acde4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=469&q=80", "sherry", "44")
+                    +menuSliderItem("https://images.unsplash.com/photo-1531263539449-56fdf29dfc4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", "Soju", "08")
+                    +menuSliderItem("https://images.unsplash.com/photo-1621866908556-4f0a830707c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", "grape wine","51")
+            .menu-page-care
+                .menu-page-care-title Maybe you are interested
+                .menu-page-care-list   
+                    +menuPageCare("https://images.unsplash.com/photo-1628809643597-654efb99b214?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80", "The secret to making flan smooth, soft and beautiful 'like a queen'")
+                    +menuPageCare("https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/mi-tron-ga-xe-6-1552905753415121749128-1.jpg", "I made mixed noodles to take out for lunch, the whole office asked for it")
+                    +menuPageCare("https://bizhostvn.com/w/nhahang/wp-content/uploads/2019/04/thịt-lợn-rừng.jpg", "Losing weight is no longer difficult since I have a 'divine' mixed vermicelli for lunch every day")
+                    +menuPageCare("https://images.unsplash.com/photo-1490556278693-b666672547a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","May be egg is the easy dishes for you, but do you know how to do egg like me?")
+                    +menuPageCare("https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80","Ice Cream is the best on the summer, let book it now for you and your family")
+                    +menuPageCare("https://images.unsplash.com/photo-1614398750956-402891a7dce1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80","BBQ the more delicous when go out with your friend")
+

@@ -1,0 +1,164 @@
+.book{
+    padding-bottom: 7rem;
+    @include backgroundImage("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    &-top{
+        margin-bottom: 5rem;
+        padding: 3rem;
+        background-color: rgba(0, 0, 0, 0.671);
+    }
+    &-list{
+        @include flexDisplay(stretch);
+        gap: 0 1rem;
+    }
+    &-item{
+        @include flexDisplay();
+        gap: 0 1rem;
+        width: calc(33.33% - 2/3rem);
+    }
+    &-icon{
+        width: 6rem;
+        height: 6rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-info{
+        @include flexDisplay(stretch, flex-start,nowrap,column);
+        gap: 1rem 0;
+        &-more{
+            font-size: 1.4rem;
+            @include textClamp(1);
+        }
+    }
+    &-contact{
+        font-weight: bold;
+        @include textClamp(1);
+        font-size: 1.7rem;
+    }
+    &-input{
+        max-width: 56rem;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    &-conference,
+    &-title,
+    &-desc{
+        color: black;
+        margin-bottom: 2rem;
+    }
+    &-title{
+        margin-bottom: 1.5rem;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    &-desc{
+        padding: 0 3.5rem;
+        line-height: 1.5;
+    }
+    &-button{
+        border-radius: 0.8rem;
+        padding: 1rem 1.5rem;
+        transition: background-color 0.2s linear;
+        &:hover{
+            background-color: $red-color-dark;
+        }
+    }
+    label{
+        display: block;
+        color: black;
+        font-weight: bold;
+        @include textClamp(1);
+    }
+    &-form{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 1rem 2rem;
+        &-item{
+            width: calc(50% - 1rem);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 0.8rem 0;
+        }
+    }
+    &-form-email{
+        position: relative;
+        width: 100%;
+    }
+    &-email-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            position: absolute;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            transform: scale(0);
+        }
+    }
+    &-select,
+    &-input-item{
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 0.8rem;
+        border: 1px solid rgb(216, 205, 205);
+    }
+    &-now{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    @include maxWidth(1023px){
+        &-list{
+            flex-direction: column;
+            gap: 1.5rem 0;
+        }
+        &-item{
+            justify-content: flex-start;
+            gap: 0 1.5rem;
+
+        }
+        &-icon{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+.book-input-item.valid + .book-email-icon .fa-check{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.book-input-item.invalid + .book-email-icon .fa-times{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.fa-check{
+    background-color: #20e3b2;
+}
+
+.fa-times{
+    background-color: #fc5776;
+}

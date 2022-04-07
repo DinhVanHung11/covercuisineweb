@@ -1,0 +1,40 @@
+.progress-bar
+header.header 
+    .header-top 
+        .container 
+            .header-top-main 
+                .header-top-title.global.global-text-small Sky's Gourmet Tocas Restaurant is pleased to serve you!
+                .header-top-info 
+                    a(href="./indexintroduce.html").header-top-info-link.global.global-text-small Payment Terms
+                    a(href="./indexintroduce.html").header-top-info-link.global.global-text-small Instructions for booking a table
+                    i.fas.fa-search.seacrh-icon.global.global-text-small
+                .header-fixed  
+                    .container.header-fixed-main
+                        .header-fixed-logo 
+                            img(src="./images/SkysTacoSmall.png", alt="")
+                        .header-fixed-menu 
+                            +headerFixedItem("Home page","./index.html")
+                            +headerFixedItem("Introduce","./indexintroduce.html")
+                            +headerFixedItem("Menu","./indexmenu.html","_blank")
+                            +headerFixedItem("News-Events","./indexintroduce.html")
+                            +headerFixedItem("Contact","./indexintroduce.html")
+                            buttton.button.header-hotline Hotline: 0999000000            
+    .header-slide 
+        .header-slide-list
+            +headerItem("SKY'S ROYAL STEAK SANDWICH","Coming to Sky's Gourmet Tacos restaurant, you will enjoy the best hot pot dishes, prepared by the top chefs in the UK. We will make you satisfied for sure","https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80")
+            +headerItem("Los Angeles cuisine","Nothing is more wonderful than enjoying American cuisine with family and loved ones. We provide hot pot dishes with American cuisine that bring a familiar but extremely special feeling for you to enjoy","https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+        //- i.fas.fa-angle-right.header-next.header-change
+        //- i.fas.fa-angle-left.header-prev.header-change
+.meal-selected-wrapper.cart-fixed
+    .meal-selected-list-wrapper
+        .meal-selected-list 
+        .meal-selected-total-wrapper 
+            .meal-selected-total
+                p.global-title.meal-selected-total-text Total
+                .meal-selected-total-price
+                    span.global-text.meal-selected-total-num 0
+                    span.global-text.meal-selected-total-dollar $
+        .meal-selected-payment-wrapper 
+            .meal-selected-payment
+                p.global-title.meal-selected-payment-text Payment now
+    i.fa.fa-cart-plus.cart-icon
