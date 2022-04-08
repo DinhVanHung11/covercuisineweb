@@ -1,3 +1,21 @@
+$(document).ready(function () {
+    $(".header-slide-list").slick({
+        prevArrow:
+            "<button type='button' class='header-prev slick-prev pull-left'><i class='fal fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow:
+            "<button type='button' class='header-next slick-next pull-right'><i class='fal fa-angle-right' aria-hidden='true'></i></button>",
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                },
+            },
+        ],
+    });
+});
+
+
 const progressBar = document.querySelector(".progress-bar");
 window.addEventListener("scroll", function(e){
     const scrollY = window.pageYOffset;
