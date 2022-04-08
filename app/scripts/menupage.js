@@ -149,8 +149,8 @@ function handleBookPlus(e){
             //         mealSelectedNumber.textContent = number;
             //     }));
             // }
-        },1000)
-    },500);
+        },800)
+    },300);
     mealSelectedTotal.textContent = priceAll.reduce(function(prevValue,currentValue){
         return prevValue + currentValue;
     },0);
