@@ -301,7 +301,7 @@ function handleBookPlus(e){
             //         mealSelectedNumber.textContent = number;
             //     }));
             // }
-        },800)
+        },1000)
     },300);
     mealSelectedTotal.textContent = priceAll.reduce(function(prevValue,currentValue){
         return prevValue + currentValue;
