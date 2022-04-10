@@ -266,41 +266,6 @@ function handleBookPlus(e){
         setTimeout(() =>{
             imageMeal.parentNode.removeChild(imageMeal);
             renderMeal(srcImage,nameMeal,priceMeal);
-            // if(mealSelectedList.classList.contains("is-show")){
-            //     const imageMealSeclectedAll = mealSelectedList.querySelectorAll("img");
-            //     const imageMealSeclectedIndex = [...imageMealSeclectedAll].findIndex(item => item.getAttribute("src") === srcImage);
-            //     const imageMealSeclected = [...imageMealSeclectedAll][imageMealSeclectedIndex];
-            //     const iconMinusSingle = imageMealSeclected.parentNode.parentNode.parentNode.querySelector(".fa-minus-circle");
-            //     const iconPlusSingle = imageMealSeclected.parentNode.parentNode.parentNode.querySelector(".fa-plus-circle");
-            //     iconMinusNoEvent.push(iconMinusSingle);
-            //     iconPlusNoEvent.push(iconPlusSingle);
-            //     iconMinusSingle.classList.add("booked");
-            //     mealSelectedList.parentNode.style.height = `${mealSelectedList.scrollHeight}px`;
-            //     [...iconPlusNoEvent].map(item => item.addEventListener("click", function(e){
-            //         const mealSelectedItem = e.target.parentNode.parentNode;
-            //         const mealSelectedNumber = mealSelectedItem.querySelector(".meal-selected-number");
-            //         let number = parseInt(mealSelectedNumber.textContent);
-            //         number++;
-            //         //number= number +1-iconPlusNoEvent.length;
-            //         mealSelectedNumber.textContent = number;
-            //     }));
-            //     iconMinusNoEvent.forEach(item => item.addEventListener("click", function(e){
-            //         const mealSelectedItem = e.target.parentNode.parentNode;
-            //         const mealSelectedNumber = mealSelectedItem.querySelector(".meal-selected-number");
-            //         let number = parseInt(mealSelectedNumber.textContent);
-            //         number--;
-            //         //number = number -1 + iconMinusNoEvent.length;
-            //         if(number < 0){
-            //             mealSelectedItem.parentNode.removeChild(mealSelectedItem);
-            //             mealSelectedList.parentNode.style.height = `${mealSelectedList.scrollHeight}px`;
-            //             if(mealSelectedList.scrollHeight === 40){
-            //                 mealSelectedList.classList.remove("is-show");
-            //                 mealSelectedList.parentNode.style.height = `0px`;
-            //             };
-            //         }
-            //         mealSelectedNumber.textContent = number;
-            //     }));
-            // }
         },1000)
     },300);
     mealSelectedTotal.textContent = priceAll.reduce(function(prevValue,currentValue){
@@ -332,6 +297,10 @@ cartIcon.addEventListener("click", function(){
         const mealSelectedNumber = mealSelectedItem.querySelector(".meal-selected-number");
         let number = parseInt(mealSelectedNumber.textContent);
         number --;
+        if(number >=0){
+            const mealSelectedPrice = parseInt(e.target.parentNode.previousElementSibling.querySelector(".meal-selected-price").textContent);
+            mealSelectedTotal.textContent = parseInt(mealSelectedTotal.textContent)- mealSelectedPrice;
+        }
         if(number < 0){
             mealSelectedItem.parentNode.removeChild(mealSelectedItem);
             mealSelectedList.parentNode.style.height = `${height}px`;
@@ -348,6 +317,8 @@ cartIcon.addEventListener("click", function(){
         let number = parseInt(mealSelectedNumber.textContent);
         number ++;
         mealSelectedNumber.textContent = number;
+        const mealSelectedPrice = parseInt(e.target.parentNode.previousElementSibling.querySelector(".meal-selected-price").textContent);
+        mealSelectedTotal.textContent = parseInt(mealSelectedTotal.textContent) + mealSelectedPrice;
     }));
 });
 
